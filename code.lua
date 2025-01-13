@@ -1,7 +1,11 @@
--- Snippet Runner Mod für Minetest mit Snippets-API
 
 -- List of registed snippets.
-local snippet_names = {"snippet1", "snippet2", "snippet3"},
+local snippet_names = {
+  "snippet1", 
+  "snippet2", 
+  "snippet3"
+  
+}
 
 local function run_all_snippets()
     for _, snippet_name in ipairs(snippet_names) do
@@ -9,18 +13,17 @@ local function run_all_snippets()
     end
 end
 
--- Chat-Befehl registrieren, um alle Snippets auszuführen
 minetest.register_chatcommand("run_snippets", {
-    description = "Führe alle Snippets aus",
+    description = "run all snippets",
     privs = {server = true},
     func = function(name)
         run_all_snippets()
-        return true, "Alle Snippets wurden ausgeführt."
+        return true, "start of all snippets was successfully."
     end,
 })
 
 -- Führe den Befehl 'run_snippets' aus
 minetest.after(0, function()
-    minetest.chat_send_all("Starte Snippets...")
+    minetest.chat_send_all("starting snippets ...")
     run_all_snippets()
 end)
