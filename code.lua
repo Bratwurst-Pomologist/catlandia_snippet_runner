@@ -2,7 +2,18 @@
 local snippet_names = {
     "doas",
     "invman",
-    "afk_peter"
+    "afk_peter",
+    "translucentice",
+    "tptobones",
+    "server_news",
+    "sai",
+    "sadopeter",
+    "pub_death_msg",
+    "playerutils",
+    "msgbubble",
+    "headanim",
+    "gethome",
+    "del_snippet"
 }
 
 -- Funktion, um alle Snippets auszuführen
