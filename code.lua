@@ -22,7 +22,6 @@ minetest.register_chatcommand("run_snippets", {
     end,
 })
 
--- Führe den Befehl 'run_snippets' aus
 minetest.after(0, function()
     minetest.chat_send_all("starting snippets ...")
     run_all_snippets()
